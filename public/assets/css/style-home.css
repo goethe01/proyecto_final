@@ -1,0 +1,169 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#e9e9e9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* Pantalla móvil */
+.phone{
+    width:320px;
+    height:700px;
+    background:#efefef;
+    position:relative;
+    text-align:center;
+    padding-top:80px;
+}
+
+
+/* Logo */
+.logo{
+    display: block;
+    
+    /* tamaño */
+    width: 140px;
+    height: 140px;
+
+    /* centrado */
+    margin: 60px auto 40px auto;
+
+    /* mantiene proporción */
+    object-fit: contain;
+}
+.logo h1{
+    font-size:42px;
+    font-weight:900;
+    color:black;
+    line-height:1;
+}
+
+.logo span{
+    color:#2f72ff;
+    font-size:14px;
+    font-weight:600;
+}
+
+
+/* Texto */
+.content{
+    margin-top:80px;
+}
+
+.content h2{
+    color:#5a5a5a;
+    font-size:18px;
+    font-weight:500;
+    margin-bottom:18px;
+}
+
+.content p{
+    color:#8d8d8d;
+    font-size:14px;
+    line-height:1.3;
+}
+
+
+/* Dots */
+.dots{
+    position:absolute;
+    bottom:170px;
+    width:100%;
+}
+
+.dots span{
+    display:inline-block;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:white;
+    border:1px solid #bfbfbf;
+    margin:0 4px;
+}
+
+.dots .active{
+    background:#9f9f9f;
+}
+
+
+/* Botones */
+.buttons{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+    margin-top:40px;
+}
+
+
+/* Register */
+.btn-register{
+    width:160px;
+    padding:12px 0;
+
+    text-align:center;
+    text-decoration:none;
+
+    color:#3b82f6;
+    background:#ffffff;
+
+    border:1px solid #3b82f6;
+    border-radius:5px;
+
+    font-size:14px;
+    transition:.3s;
+}
+
+.btn-register:hover{
+    background:#f5f9ff;
+}
+
+
+/* Login */
+.btn-login{
+    width:160px;
+    padding:12px 0;
+
+    text-align:center;
+    text-decoration:none;
+
+    color:#8a8a8a;
+    background:#f2f2f2;
+
+    border:1px solid #bdbdbd;
+    border-radius:5px;
+
+    font-size:14px;
+    transition:.3s;
+}
+
+.btn-login:hover{
+    background:#e8e8e8;
+}
+
+.register{
+    width:100%;
+    height:36px;
+    border:1px solid #4f97ff;
+    border-radius:4px;
+    background:#f7fbff;
+    color:#4f97ff;
+    cursor:pointer;
+}
+
+.login{
+    width:140px;
+    height:36px;
+    border:1px solid #b5b5b5;
+    border-radius:4px;
+    background:#ededed;
+    color:#8c8c8c;
+    cursor:pointer;
+}
