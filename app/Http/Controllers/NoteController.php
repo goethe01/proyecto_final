@@ -3,41 +3,37 @@
 namespace App\Http\Controllers;
 
 use App\Models\Note;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class NoteController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         $notes = Note::all();
         return view('note.index',compact('notes'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('note.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
-    }
+        $user = Auth::user()->id;
+        $note = Note::create([
+            'title' => $request->title,
+            'content' => $request->content,
+            'user_id' => $user,
+        ]);
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+        return redirect()->route('note.index');
+    }
+    public function show(Note $note)
     {
-        //
+        
     }
 
     /**
