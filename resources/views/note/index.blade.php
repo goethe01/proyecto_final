@@ -17,7 +17,10 @@
                     @forelse ($notes as $note)
                     <div class="inline-block px-12 py-3 m-2 text-gray-900 dark:text-gray-100 border rounded">
                         
-                        <p>{{$note->title}}</p>
+                        <a class="inline-block px-2 py-1 text-gray-900 dark:text-gray-100 border rounded" href="{{route('note.show',$note->id)}}">
+                        {{$note->title}}
+                        </a>
+                        
                     </div>    
                     @empty
                         <p>No hay notas disponibles</p>

@@ -33,12 +33,9 @@ class NoteController extends Controller
     }
     public function show(Note $note)
     {
-        
+        return view('note.show',compact('note'));
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
+    
     public function edit(string $id)
     {
         //
