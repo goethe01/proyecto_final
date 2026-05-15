@@ -20,6 +20,9 @@
                         <a class="inline-block px-2 py-1 text-gray-900 dark:text-gray-100 border rounded" href="{{route('note.show',$note->id)}}">
                         {{$note->title}}
                         </a>
+                        <a class="inline-block px-2 py-1 text-gray-900 dark:text-gray-100 border rounded" href="{{route('note.edit',$note->id)}}">
+                        Edit
+                        </a>
                         
                     </div>    
                     @empty

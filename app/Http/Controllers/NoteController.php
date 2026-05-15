@@ -6,6 +6,7 @@ use App\Models\Note;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class NoteController extends Controller
 {
@@ -36,17 +37,15 @@ class NoteController extends Controller
         return view('note.show',compact('note'));
     }
     
-    public function edit(string $id)
-    {
-        //
+    public function edit(Note $note){
+
+        return view('note.edit', compact('note'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Note $note)
     {
-        //
+        $note ->update($request->all());
+        return redirect()->route('note.index');
     }
 
     /**

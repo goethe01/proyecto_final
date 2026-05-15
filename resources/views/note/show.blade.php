@@ -9,7 +9,13 @@
         <div class="max-w-3xl mx-auto sm:px-6 lg:px-8">
 
             <div class="bg-white dark:bg-gray-800 shadow-sm rounded-lg p-8">
-                <p>{{$note ->title}}</p>
+                <h3 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight
+                ">{{$note->title}}</h3>
+
+                <p class="text-gray-700 dark:text-gray-300 text-base leading-relaxed">
+                    {{$note->content}}</p>
+
+
                 <!-- Back -->
                 <a href="{{ route('note.index') }}"
                 class="inline-flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg
